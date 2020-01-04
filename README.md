@@ -1,2 +1,2 @@
 # test-demo
-testing to use the git.
+make ease of use the git.
