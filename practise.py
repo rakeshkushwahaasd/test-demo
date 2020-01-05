@@ -1,8 +1,13 @@
-import numpy as np
-b=np.array([21,22,33,12,2,4,8,6])
-a=np.array([1,3,56,43,43,34,45,23])
-c=a[b%2 == 0]
-a[b%2 == 0]=-1
-c[2]=10
-print(a)
-print(c)
+def l_c_m(*nums):
+	ans=1
+
+	for num in nums:
+		smaller=min(ans,num)
+		hcf=1
+		for i in range(1,smaller+1):
+			if (num%i==0) and (ans%i==0) and (hcf<i):
+				hcf=i
+		ans=(ans*num)/hcf
+	return ans
+
+print(l_c_m(12,10,5,12,3,15,25))
